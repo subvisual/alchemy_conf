@@ -2,9 +2,12 @@
 description = "The most exquisite Elixir conference in Portugal"
 date = "14 & 15 May 2021"
 
+[location]
+city = "Braga, Portugal"
+
 [tickets]
-url = "ti.to/some-url-here"
+url = "https://ti.to/subvisual/alchemy-conf-2021"
 
 [tickets.early_bird]
-date = "01-12-2020"
-price = "150€"
+date = "01-01-2021"
+price = "160.80€"

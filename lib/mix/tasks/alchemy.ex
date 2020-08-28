@@ -14,6 +14,7 @@ defmodule Mix.Tasks.Alchemy do
       line(),
       line(),
       date(),
+      location(),
       line(),
       line(),
       price(),
@@ -37,6 +38,13 @@ defmodule Mix.Tasks.Alchemy do
 
   defp date do
     AlchemyConf.date()
+    |> center()
+  end
+
+  defp location do
+    %{city: city} = AlchemyConf.location()
+
+    city
     |> center()
   end
 

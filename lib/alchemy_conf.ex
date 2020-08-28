@@ -9,6 +9,10 @@ defmodule AlchemyConf do
     get_in(@config, [:meta, :date])
   end
 
+  def location do
+    @config[:location]
+  end
+
   def tickets do
     @config[:tickets]
   end
