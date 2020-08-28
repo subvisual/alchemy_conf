@@ -1,18 +1,23 @@
 defmodule AlchemyConf do
-  @moduledoc """
-  Documentation for `AlchemyConf`.
-  """
+  @config File.read!("config.toml") |> Toml.decode!(keys: :atoms)
 
-  @doc """
-  Hello world.
+  def description do
+    get_in(@config, [:meta, :description])
+  end
 
-  ## Examples
+  def date do
+    get_in(@config, [:meta, :date])
+  end
 
-      iex> AlchemyConf.hello()
-      :world
+  def price do
+    early_bird_date = get_in(@config, [:tickets, :early_bird, :date])
+    early_bird_price = get_in(@config, [:tickets, :early_bird, :price])
+    url = get_in(@config, [:tickets, :url])
 
-  """
-  def hello do
-    :world
+    """
+    Early birds (until #{early_bird_date}): #{early_bird_price}
+
+    Get them at: #{url}
+    """
   end
 end

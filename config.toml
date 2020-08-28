@@ -1,0 +1,10 @@
+[meta]
+description = "The most exquisite Elixir conference in Portugal"
+date = "14 & 15 May 2021"
+
+[tickets]
+url = "ti.to/suff"
+
+[tickets.early_bird]
+date = "01-12-2020"
+price = "150€"
