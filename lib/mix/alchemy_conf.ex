@@ -4,8 +4,10 @@ defmodule Mix.AlchemyConf do
   """
 
   @char_deviation 3
+  @reset IO.ANSI.reset()
 
-  # Based off https://github.com/ReSTARTR/ex-lolcat
+  # Based off @ReSTARTR/ex-lolcat and @Joe-noh/colorful
+
   def rainbow(str) do
     seed = :rand.uniform(256)
 
@@ -21,7 +23,8 @@ defmodule Mix.AlchemyConf do
       char
     else
       rgb = rgb(seed + idx / 8)
-      Colorful.string(char, rgb)
+
+      colorize(char, rgb)
     end
   end
 
@@ -35,5 +38,13 @@ defmodule Mix.AlchemyConf do
 
   defp to_ansi(v) do
     (6 * (v / 256)) |> Kernel.trunc()
+  end
+
+  defp rgb_to_ansi({r, g, b}) do
+    "\e[38;5;#{16 + r * 36 + 6 * g + b}m"
+  end
+
+  defp colorize(str, rgb) do
+    @reset <> rgb_to_ansi(rgb) <> str <> @reset
   end
 end

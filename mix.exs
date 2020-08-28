@@ -22,8 +22,6 @@ defmodule AlchemyConf.MixProject do
 
   defp deps do
     [
-      {:toml, "~> 0.6.1"},
-      {:colorful, "~> 0.6.0"},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end
@@ -34,7 +32,7 @@ defmodule AlchemyConf.MixProject do
     [
       licenses: ["ISC"],
       links: %{"GitHub" => "https://github.com/subvisual/alchemy_conf"},
-      files: ~w(.formatter.exs mix.exs README.md lib LICENSE config.toml)
+      files: ~w(.formatter.exs mix.exs README.md lib LICENSE)
     ]
   end
 end

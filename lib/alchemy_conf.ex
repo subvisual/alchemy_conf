@@ -1,19 +1,24 @@
 defmodule AlchemyConf do
-  @config Path.join([__DIR__, "..", "config.toml"]) |> File.read!() |> Toml.decode!(keys: :atoms)
-
   def description do
-    get_in(@config, [:meta, :description])
+    "The most exquisite Elixir conference in Portugal"
   end
 
   def date do
-    get_in(@config, [:meta, :date])
+    "14 & 15 May 2021"
   end
 
   def location do
-    @config[:location]
+    %{
+      city: "Braga, Portugal"
+    }
   end
 
   def tickets do
-    @config[:tickets]
+    %{
+      early_bird: %{
+        date: "01-01-2021",
+        price: "160.80€"
+      }
+    }
   end
 end
