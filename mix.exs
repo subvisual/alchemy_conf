@@ -4,7 +4,7 @@ defmodule AlchemyConf.MixProject do
   def project do
     [
       app: :alchemy_conf,
-      version: "0.2.0",
+      version: "0.3.0",
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
       description: description(),
@@ -34,7 +34,7 @@ defmodule AlchemyConf.MixProject do
     [
       licenses: ["ISC"],
       links: %{"GitHub" => "https://github.com/subvisual/alchemy_conf"},
-      files: ~w(.formatter.exs mix.exs README.md lib LICENSE)
+      files: ~w(.formatter.exs mix.exs README.md lib LICENSE config.toml)
     ]
   end
 end
