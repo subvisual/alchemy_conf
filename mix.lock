@@ -1,3 +1,7 @@
 %{
+  "bunt": {:hex, :bunt, "0.1.6", "5d95a6882f73f3b9969fdfd1953798046664e6f77ec4e486e6fafc7caad97c6f", [:mix], [], "hexpm", "4fb7b2f7b04af13cf210b132f8d10db52d4a57d36cb974e8025d7fdb12ca97fc"},
+  "colorful": {:hex, :colorful, "0.6.0", "52005f84776479bc2ca292fe542e8e00f696048c09e61ba412fdd19db6c7b98e", [:mix], [], "hexpm", "6b00225f137efdde7901d3ddc7626a3b33031c20ea145097b2442680e72adc3d"},
+  "lolcat": {:hex, :lolcat, "0.0.1", "421d6f6bffe231b4e913bc0303d643ae7583f9da409072eb6d59207711b8ab92", [:mix], [{:colorful, ">= 0.0.0", [hex: :colorful, repo: "hexpm", optional: false]}, {:quickrand, ">= 0.0.0", [hex: :quickrand, repo: "hexpm", optional: false]}], "hexpm", "884799d2e7f294a6a5455e19c9816592d7b1314cefaba18952876fef0c4a10af"},
+  "quickrand": {:hex, :quickrand, "2.0.0", "665c49881808da68a5c58ddeda16ea60b16be54dbb719b029eea5835fd12dae9", [:rebar3], [], "hexpm", "0344d02b40bc44b3e8e8a3dbd89a3b29e5690bc44811149ee704ac3a695a29e3"},
   "toml": {:hex, :toml, "0.6.2", "38f445df384a17e5d382befe30e3489112a48d3ba4c459e543f748c2f25dd4d1", [:mix], [], "hexpm", "d013e45126d74c0c26a38d31f5e8e9b83ea19fc752470feb9a86071ca5a672fa"},
 }

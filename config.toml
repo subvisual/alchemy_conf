@@ -3,7 +3,7 @@ description = "The most exquisite Elixir conference in Portugal"
 date = "14 & 15 May 2021"
 
 [tickets]
-url = "ti.to/suff"
+url = "ti.to/some-url-here"
 
 [tickets.early_bird]
 date = "01-12-2020"

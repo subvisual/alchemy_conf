@@ -26,7 +26,8 @@ defmodule Mix.Tasks.Alchemy do
 
   defp title do
     "Alchemy Conf"
-    |> center()
+    |> Mix.AlchemyConf.rainbow()
+    |> center(string: "Alchemy Conf")
   end
 
   defp description do
@@ -65,8 +66,9 @@ defmodule Mix.Tasks.Alchemy do
     "##{spaces}#"
   end
 
-  defp center(str) do
-    nr_spaces = 80 - String.length(str) - 2
+  defp center(str, opts \\ []) do
+    displayed_string = Keyword.get(opts, :string, str)
+    nr_spaces = 80 - String.length(displayed_string) - 2
     nr_spaces_left = floor(nr_spaces / 2)
     nr_spaces_right = nr_spaces - nr_spaces_left
 

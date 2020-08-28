@@ -19,7 +19,8 @@ defmodule AlchemyConf.MixProject do
 
   defp deps do
     [
-      {:toml, "~> 0.6.1"}
+      {:toml, "~> 0.6.1"},
+      {:colorful, "~> 0.6.0"}
     ]
   end
 end
