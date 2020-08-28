@@ -9,15 +9,7 @@ defmodule AlchemyConf do
     get_in(@config, [:meta, :date])
   end
 
-  def price do
-    early_bird_date = get_in(@config, [:tickets, :early_bird, :date])
-    early_bird_price = get_in(@config, [:tickets, :early_bird, :price])
-    url = get_in(@config, [:tickets, :url])
-
-    """
-    Early birds (until #{early_bird_date}): #{early_bird_price}
-
-    Get them at: #{url}
-    """
+  def tickets do
+    @config[:tickets]
   end
 end
