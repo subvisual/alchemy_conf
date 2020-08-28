@@ -4,8 +4,8 @@ defmodule AlchemyConf.MixProject do
   def project do
     [
       app: :alchemy_conf,
-      version: "0.4.0",
-      elixir: "~> 1.10",
+      version: "0.5.0",
+      elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,
       description: description(),
       package: package(),
