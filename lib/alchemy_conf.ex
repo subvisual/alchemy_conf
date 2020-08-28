@@ -1,5 +1,5 @@
 defmodule AlchemyConf do
-  @config File.read!("config.toml") |> Toml.decode!(keys: :atoms)
+  @config Path.join([__DIR__, "..", "config.toml"]) |> File.read!() |> Toml.decode!()
 
   def description do
     get_in(@config, [:meta, :description])
