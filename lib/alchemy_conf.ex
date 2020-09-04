@@ -17,7 +17,7 @@ defmodule AlchemyConf do
     %{
       early_bird: %{
         date: "01-01-2021",
-        price: "160.80€"
+        price: "150€"
       },
       url: "https://ti.to/subvisual/alchemy-conf-2021"
     }
